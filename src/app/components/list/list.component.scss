@@ -1,0 +1,11 @@
+.container{
+  margin: 0 80px;
+  &__section-element{
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 23rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+
+}
+

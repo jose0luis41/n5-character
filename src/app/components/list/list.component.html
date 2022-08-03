@@ -1,0 +1,19 @@
+<section class="container">
+  <button (click)="backToHome()" mat-icon-button aria-label="back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h2>{{'characters' | myTranslate }}</h2>
+  <mat-paginator [length]="length"
+                 [pageSize]="pageSize"
+                 (page)="pageEvent = getServerData($event)"
+                 aria-label="Select page">
+  </mat-paginator>
+  <section class="container__section-element">
+    <ng-container *ngFor="let character of list">
+      <app-character [character]="character"></app-character>
+    </ng-container>
+  </section>
+
+</section>
+
+
